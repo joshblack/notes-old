@@ -1,3 +1,3 @@
 # Notes
 
-A collection of notes used for understanding and teaching concepts.
+A collection of notes and resources used for understanding and teaching concepts.
