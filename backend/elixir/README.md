@@ -13,3 +13,7 @@
 #### Testing
 
 - [Testing a Phoenix JSON API](https://robots.thoughtbot.com/testing-a-phoenix-elixir-json-api)
+
+#### Security
+
+- [Routing Security with Phoenix](https://www.youtube.com/watch?v=4fSsTdn195g)
