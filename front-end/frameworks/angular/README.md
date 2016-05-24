@@ -2,6 +2,8 @@
 
 Following along with [this tutorial](https://egghead.io/series/angularjs-app-from-scratch-getting-started).
 
+Should probably be using John Papa's [Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
+
 ### Controllers
 
 One way communciation:
@@ -44,6 +46,8 @@ angular.module('myApp', [])
 ```
 
 ## Managing Simple States
+
+This is a simple example, but probably shouldn't be setting scope directly!
 
 ```js
 angular.module('myApp', [])
