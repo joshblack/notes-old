@@ -1,5 +1,23 @@
 ## Getting Started
 
+### Concepts
+
+- Model
+- View
+- Controller
+  - Constructor function that creates a controller instance. Purpose is to expose variables and functionality to expressions and directives.
+  - Can initialize in a template with the `ng-controller=""` directive inside an HTML tag.
+  - Typically should use `ControllerName as controllerName` to save the controller to the variable `controllerName` in the current scope.
+- Templates
+- Directives
+- Expressions
+  - `{{ expression | filter }}` syntax, allows you to access the scope and evalutes to a value
+  - A `filter` formats the value of an expression for display to the user
+- Dependency Injection
+
+
+### Tutorials
+
 Following along with [this tutorial](https://egghead.io/series/angularjs-app-from-scratch-getting-started).
 
 Should probably be using John Papa's [Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
