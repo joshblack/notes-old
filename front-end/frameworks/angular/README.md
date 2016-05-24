@@ -42,3 +42,35 @@ angular.module('myApp', [])
   </li>
 </body>
 ```
+
+## Managing Simple States
+
+```js
+angular.module('myApp', [])
+  .controller('MainCtrl', function ($scope) {
+    $scope.categories = [{ id: 0, name: 'Development' }];
+    $scope.setCurrentCategory = (category) => scope.currentCategory = category;
+    
+    $scope.isCreating = false;
+    $scope.isEditing = false;
+    
+    $scope.startCreating = function startCreating() {
+      $scope.isCreating = true;
+      $scope.isEditing= false;
+    };
+    
+    $scope.cancelCreating = function cancelCreating() {
+      $scope.isCreating = false;
+    };
+    
+    $scope.startfunction = function startEditing() {
+      $scope.isCreating = false;
+      $scope.isEditing = true;
+    };
+    
+    $scope.cancelEditing = function cancelEditing() {
+      $scope.isEditing = false;
+    };
+  });
+```
+
