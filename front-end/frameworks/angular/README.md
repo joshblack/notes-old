@@ -63,7 +63,7 @@ angular.module('myApp', [])
       $scope.isCreating = false;
     };
     
-    $scope.startfunction = function startEditing() {
+    $scope.startEditing = function startEditing() {
       $scope.isCreating = false;
       $scope.isEditing = true;
     };
@@ -71,6 +71,22 @@ angular.module('myApp', [])
     $scope.cancelEditing = function cancelEditing() {
       $scope.isEditing = false;
     };
+    
+    $scope.shouldShowCreating = () => $scope.currentCategory && !$scope.isEditing;
+    $scope.shouldShowEditing = () => $scope.isEditing && !$scope.isCreating;
   });
 ```
 
+```html
+<!-- Template -->
+<body ng-controller="MainCtrl">
+  <div ng-if="shouldShowCreating()">
+    <button class="close">&times;</button>
+    <button ng-click="startEditing()"></button>
+  </div>
+  <div ng-if="shouldShowEditing()">
+    <button class="close">&times;</button>
+    <button ng-click="startCreating()"></button>    
+  </div>
+</body>
+```
