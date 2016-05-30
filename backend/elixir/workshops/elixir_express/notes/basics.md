@@ -82,3 +82,20 @@ Enum.map [3, 6, 9], &(&1 * 2)
 # Same as
 Enum.map [3, 6, 9], fn i -> i * 2 end
 ```
+
+### Named Functions
+
+```ex
+defmodule Weather do
+  def celsius_to_fahrenheit(celsius) do
+    (celsius * 1.8) + 32
+  end
+  
+  def high, do: 50
+  def low, do: 32
+end
+
+Weather.high
+
+Weather.celsius_to_fahrentheight 20
+```
