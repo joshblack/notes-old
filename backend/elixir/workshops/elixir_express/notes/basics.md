@@ -53,3 +53,32 @@ Keyword.values types  # ["Atom", "Tuple"]
 
 if true, [do: "it's true"}          # it's true
 ```
+
+### Variable Binding
+
+```ex
+sum = 10
+sum_val = fn -> IO.puts "Sum value was #{sum}" end
+
+sum_val.() # 10
+
+sum = 12
+
+sum_val.() # 10, doesn't change! Just the binding to sum after the re-bind changes
+```
+
+### Anonymous functions
+
+```ex
+add = fn a, b ->
+  a + b
+end
+
+add.(1, 2) # 3
+
+# Shorthand
+Enum.map [3, 6, 9], &(&1 * 2)
+
+# Same as
+Enum.map [3, 6, 9], fn i -> i * 2 end
+```
