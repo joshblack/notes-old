@@ -13,3 +13,42 @@
   - Never ask your users what they want, and _never_ ask the developers what they think the user wants
   - Get out of your chair and find out what they need
   - IDEO: We create empathy, we build personas to remind us that real people use our products
+  - Each user has a goal, a job to get done
+  - Figure out what it is that they want to do, iterate to make that process better and better
+  - Find core jobs, make them as easy as possible to do
+  - Once you know where you are, figure out where you want to be
+  - Do deep thinking, value stream mapping, 5 y's, 
+  - Impact mapping: choose the right outcomes by measuring the severity of the problem or size of the opportunity
+  - 80/20 thinking caps (20% of the features is used 80% of the time)
+  - Agile has a great way to get products out quickly, need to find the right 20 to build
+  - Understand where is the greatest upside
+  - Set target outcomes
+  - Target outcomes are the poke yoke of product development
+  - They make it easy to build the right thing and hard to build the wrong thing (think floppy disks, only one way to put it in a computer)
+  - Helps us tell which features to put in, and which features not to build
+  - We can build features quickly, we need to know which ones are the right ones to build
+  - Target outcomes need to be clear and measurable
+  - Need a good baseline, need data to help determine that baseline
+  - If you don't measure how will you know when you get there?
+  - Can you quantify everything?
+    - We're not measuring to get the most precise number
+    - We're trying to get down to a level of understanding where it's easy to do the right thing, hard to do the wrong thing
+  - Target outcomes set a direction, and th ere are many ways to achieve it
+  - Options Thinking
+  - When you plan based on outputs, you commit to a certain future
+    - This is what we think we're going to do, danger is that we're defining it up-front, it has a life of it's own
+  - Stop pretending you can see the future and _create options_
+  - Have multiple ideas
+  - Keep your options open, be ready to execute rapidly
+    - Make decisions as reversible as possible, and irreversible decisions as late as possibly
+  - It's about arrival, not surival, of the fittest. Surivival is the slowest form of suicide
+    - It's the people who can get to market with the right product the quickest, not the ones who can just suriveve
+  - Outcomes and options are fractal
+    - Reach, engagement, for example. Should align to every area of development right down to the quality of your systems
+  - Each one leads to another
+  - It's more tree-based, than a linear product backlog (very tactical thinking, keep hacking things together and hoping for a good result)
+  - There are no product requirements, they are product guesses. Stop guessing and start testing
+  - Run multiple options fast, make the unknowns known
+  - Set based design, run options concurrently on the mark
+  - Get in front of your users early and often
+  - 
