@@ -29,3 +29,67 @@ After the process is created, `spawn/1` immediately returns and the process's ex
 
 Each process maintains its own "mailbox", which is simply a FIFO queue that allows the process to process messages as they are received from other processes. You send messages using the `pid` associated to a process, and any message sent to a process in deep-copied since processes can't share memory.
 
+To send messages, we can use `send/2`
+
+```ex
+send(pid, {:ok, "message"})
+```
+
+Which we can then read inside of the process using a `receive` block:
+
+```ex
+receive do
+  {:ok, message} -> #...
+  {:error, reason} -> #...
+end
+```
+
+`receive` here tries to find the first message in the process' mailbox that can be matched against any of the provided clauses.
+
+## Server Processes
+
+A Server Process is an informal name for a process that:
+
+- runs for a long time (or forever)
+- can handle various requests (messages)
+
+Consider the following server:
+
+```ex
+defmodule ExampleServer do
+  # Called the `interface` function that is used by clients to start
+  # the server process
+  def start do
+    spawn(&loop/0)
+  end
+  
+  def run_async(server_pid, query_def) do
+    send(server_pid, {:run_query, self, query_def})
+  end
+  
+  def get_result do
+    receive do
+      {:query_result, result} -> result
+    after 5000 ->
+      {:error, :timeout}
+    end
+  end
+  
+  defp loop do
+    receive do
+      {:run_query, caller, query_def ->
+        send(caller, {:query_result, run_query(query_def)})
+    end
+    
+    loop
+  end
+  
+  defp run_query(query_def) do
+    :timer.sleep(2000)
+    
+    "#{query_def} result"
+  end
+end
+```
+
+A standard abstraction called `gen_server` (generic server) is provided to us to use, which helps out with the development of stateful server processes.
