@@ -11,3 +11,21 @@ Concurrency plays an important role in achieving HA. In BEAM, a unit of concurre
 BEAM processes are completely isolated, sharing no memory and a crash on one process won't take down other processes. BEAM also provides a means to detect a process crash and do something about it.
 
 Each process can also manage some state, and can receive messages from other processes to manipulate or retrieve state.
+
+
+## Creating processes
+
+We can use the auto-loaded `spawn/1` function to create new processes:
+
+```ex
+spawn(fn ->
+  # ...
+end)
+```
+
+After the process is created, `spawn/1` immediately returns and the process's execution continues. The lambda passed into `spawn/1` is ran concurrently, and the memory of its process is released once the lambda is done and the spawned process exits.
+
+## Message Passing
+
+Each process maintains its own "mailbox", which is simply a FIFO queue that allows the process to process messages as they are received from other processes. You send messages using the `pid` associated to a process, and any message sent to a process in deep-copied since processes can't share memory.
+
