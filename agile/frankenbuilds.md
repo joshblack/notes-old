@@ -51,4 +51,28 @@
   - Run multiple options fast, make the unknowns known
   - Set based design, run options concurrently on the mark
   - Get in front of your users early and often
-  - 
+  - Seeing is believing, research is too important to leave up to the researches
+  - Yahoo used to show developers and bring them on field trips to show them that people don't use it
+  - Ignore your mother, be fast, dirty, and cheap
+  - Give away free lunch every friday and have people use your product, get feedback!
+  - More features are actually a problem, remove the inessentials so the essentials can speak
+  - When the iPhone came out, they had 40% less of the features than their competitors
+  - The game is to hit the target with as few bullets as possible
+  - Velocity, cycle time measures, are all for throughput. Tells developers to build as much as possible.
+  - Set a game target, we need to get here quickly with _as few features as possible_
+  - Minimum viable and not maximum potential
+  - Measure as you go to check and see if you're in the right direction
+  - Setup automated metric frameworks
+  - Do you have usage statistics, 
+  - If your metrics lag, you lag
+  - Multivariate testing, skip testing in a room and send it out
+  - Metrics gathering is meant for everyone, especially developers
+  - Transparency is key, share the data with the entire development team
+  - Progress indicators tell if you you're on track
+  - The most important thing to see is not burndown charts, it's about seeing if target outcomes validate the investment
+- How do we know if we've succeeded?
+  - If we are not hitting the target outcomes, adapt
+- Agilistas are killing the planet
+- When you use the machine gun approach you build more features fast
+- The more featuers you build the more resources you consume
+- Save the features, save the planet
