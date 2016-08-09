@@ -17,6 +17,16 @@ For the mathematically inclined, the Cartesian Product, A x B, is a set defined 
 A x B = { (a, b) | a ∈ A and b ∈ B }
 ```
 
+### Pattern Matching
+
+Tuples are a great opportunity to leverage pattern-matching, for example:
+
+```ml
+# let (code, message) = some_tuple;;
+val code : int = 404
+val message : string = "Not Found"
+```
+
 ## Lists
 
 An important distinction for lists in OCaml is that you use semicolons to separate list elements in lists rather than commas. Commas are instead used for tuples.
@@ -27,5 +37,13 @@ Lists in OCaml are defined then using brackets and semicolons, like in `[1; 2; 3
 (* Prepend one element onto a list *)
 # 1 :: 2 :: 3 :: [];;
 - : int list = [1; 2; 3]
+```
 
+We can also use the `::` operator to pattern-match and grab the head and tail of a list.
+
+```ml
+let my_favorite_language languages =
+  match languages with
+  | head :: tail -> head
+  | [] -> "OCaml"
 ```
