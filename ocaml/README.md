@@ -1,5 +1,22 @@
 # OCaml
 
+## Tuples
+
+Tuples are ordered collectinos of values that can each be of a different type. You create tuples by separating values by a comma. For example:
+
+```ml
+# let some_tuple = (404, "Not Found");;
+val some_tuple : int * string
+```
+
+We can see the `*` character in the type signature, which represents the Cartesian product of the set of elements of type `t` and the set of elements of type `s`.
+
+For the mathematically inclined, the Cartesian Product, A x B, is a set defined as:
+
+```
+A x B = { (a, b) | a ∈ A and b ∈ B }
+```
+
 ## Lists
 
 An important distinction for lists in OCaml is that you use semicolons to separate list elements in lists rather than commas. Commas are instead used for tuples.
