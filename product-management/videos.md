@@ -4,4 +4,4 @@
 
 Des Traynor, Itercom
 
-> Obsess about your problem, not your products.
+> Obsess about your problem, not your product.
