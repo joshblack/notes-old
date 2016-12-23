@@ -13,3 +13,9 @@ Below are some of the podcasts that stick out that I've frequently come back to,
 - When you’re building a product, you have to balance the day to day to day activities with the long term vision, thinking in terms of six years, six months, and six weeks.
 - Getting the balance right between competing priorities in your product is only achieved by having a well defined roadmap, with clearly defined inputs.
 - Most companies focus on 10% incremental improvements. Aiming for a 10x improvement, ten times better than what exists today, can help redefine the problem entirely.
+
+## Ilya Fushman on Growing Successful Products
+
+[Source](https://blog.intercom.com/index-ventures-ilya-fushman-on-growing-successful-products/)
+
+> If you take a step back and think about what a platform really is, a platform is a marketplace. It’s a multi-sided marketplace that connects the buyers or users of products with the creators or sellers of those products.
