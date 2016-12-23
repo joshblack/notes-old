@@ -5,3 +5,7 @@
 Des Traynor, Itercom
 
 > Obsess about your problem, not your product.
+
+## [10x not 10%: Product management by orders of magnitude](https://vimeo.com/141675862)
+
+Ken Norton, Mind the Product (2015)
