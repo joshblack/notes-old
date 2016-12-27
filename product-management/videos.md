@@ -33,3 +33,19 @@ Des Traynor, Intercom
 ## [Thinking through the funnel](https://www.youtube.com/watch?v=mgj-fxZHoys)
 
 Des Traynor, Intercom
+
+### Highlights
+
+- [Talking to people in the funnel](https://youtu.be/mgj-fxZHoys?t=633)
+- [What is customer onboarding?](https://youtu.be/mgj-fxZHoys?t=791)
+- [Great example of why you should know what you’re building, and how you need to make sure you know how people are using it](https://youtu.be/2u_r3o4HCw8?t=278)
+
+## [Find Product & Market Fit through Customer Conversations](https://www.youtube.com/watch?v=2u_r3o4HCw8)
+
+Des Traynor, Intercom
+
+> You find and maintain product market fit by having customer conversations with the right people, at the right time, in the right place, asking the right questions and then acting on the feedback.
+
+### Highlights
+
+- [You have to start with a product that solves a problem that you understand](https://youtu.be/mgj-fxZHoys?t=2112)
