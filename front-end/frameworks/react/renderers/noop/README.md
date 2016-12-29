@@ -37,6 +37,10 @@ type TextInstance = {|
 |};
 ```
 
+_Note: If you're wondering what `{| |}` stands for, it corresponds to Flow's [exact object types](https://github.com/facebook/flow/releases/tag/v0.32.0)_
+
 ## `NoopRenderer`
+
+`NoopRenderer` makes a call to `ReactFiberReconclier`, which exposes a function that takes in a `HostConfig` type.
 
 ## `ReactNoop`
