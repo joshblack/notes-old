@@ -58,6 +58,7 @@ Internally, the module leverages two maps for keeping track of `rootContainers` 
     - Create the `root` by calling to `NoopRenderer#createContainer` by passing in the new `container`
     - Update the `roots` Map by adding the given `rootID` key with value `root`
   - Call `NoopRenderer#updateContainer` with the given `element`, the existing `root`, `null`, and the optional `callback`.
+- `ReactNoop#unmountRootWithID(rootID: string)`: Find the given `root` by looking up the value in the `roots` Map. If there is a root, call `NoopRenderer#updateContainer` to set it's value to null, and in the callback remove the node from the `roots` and `rootContainers` Maps.
 
 ## Module
 
