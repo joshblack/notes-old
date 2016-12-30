@@ -1,6 +1,6 @@
 # `createContainer`
 
-_Note: this isn't a file located in the library, just are existing notes for understanding the `createContainer` command from a `Reconciler`.
+_Note: this isn't a file located in the library, just are existing notes for understanding the `createContainer` command from a `Reconciler`._
 
 ### Initial Container
 
