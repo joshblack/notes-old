@@ -1,5 +1,50 @@
 # `ReactFiber`
 
+`ReactFiber` exports the `Fiber` type, as well as a variety of functions for building different kinds of Fibers.
+
+### `createFiber(tag: TypeOfWork, key: null | string): Fiber`
+
+Given a tag and possible key, build a Fiber!
+
+### `cloneFiber(fiber: Fiber, priorityLevel: PriorityLevel): Fiber`
+
+Used to create an alternate fiber to do work on. From the source:
+
+```js
+// We clone to get a work in progress. That means that this fiber is the
+// current. To make it safe to reuse that fiber later on as work in progress
+// we need to reset its work in progress flag now. We don't have an
+// opportunity to do this earlier since we don't traverse the tree when
+// the work in progress tree becomes the current tree.
+// fiber.progressedPriority = NoWork;
+// fiber.progressedChild = null;
+
+// We use a double buffering pooling technique because we know that we'll only
+// ever need at most two versions of a tree. We pool the "other" unused node
+// that we're free to reuse. This is lazily created to avoid allocating extra
+// objects for things that are never updated. It also allow us to reclaim the
+// extra memory if needed.
+```
+
+### `createHostRootFiber(): Fiber`
+
+Creates a Fiber with the `HostRoot` `TypeOfWork`.
+
+### `createFiberFromElementType(type: mixed, key: null | string): Fiber`
+
+Creates a Fiber based on the given `type`, or we've been given a continutation that is already a fiber.
+
+As a result, we branch based loosely off of the given `type` into the following scenairos:
+
+- If `typeof type === 'function'`:
+  - We use a `shouldConstruct` utility to decide whether we've been given a `ClassComponent` or `IndeterminateComponent` and build a fiber with the corresponding `tag`/`TypeOfWork`.
+- If `typeof type === 'string'`:
+  - We create a Fiber with the `HostComponent` tag
+- If `typeof type === 'object' && type !== null && typeof type.tag === 'number'`:
+  - Assumed to be a continuation and is a fiber already
+
+### `createFiberFromElement(element: ReactElement, priorityLevel: PriorityLevel): Fiber`
+
 ## Module
 
 This module imports the following modules:
@@ -33,6 +78,30 @@ import type { TypeOfWork } from 'ReactTypeOfWork';
 import type { TypeOfSideEffect } from 'ReactTypeOfSideEffect';
 import type { PriorityLevel } from 'ReactPriorityLevel';
 import type { UpdateQueue } from 'ReactFiberUpdateQueue';
+```
+
+Finally, this module exposes the following exports:
+
+```js
+// This is used to create an alternate fiber to do work on.
+// TODO: Rename to createWorkInProgressFiber or something like that.
+exports.cloneFiber = function (fiber: Fiber, priorityLevel: PriorityLevel): Fiber
+
+exports.createHostRootFiber = function (): Fiber
+
+exports.createFiberFromElement = function (element: ReactElement, priorityLevel: PriorityLevel): Fiber
+
+exports.createFiberFromFragment = function (elements: ReactFragment, priorityLevel: PriorityLevel): Fiber
+
+exports.createFiberFromText = function (content: string, priorityLevel: PriorityLevel): Fiber
+
+exports.createFiberFromElementType = createFiberFromElementType;
+
+exports.createFiberFromCoroutine = function (coroutine: ReactCoroutine, priorityLevel: PriorityLevel): Fiber
+
+exports.createFiberFromYield = function (yieldNode: ReactYield, priorityLevel: PriorityLevel): Fiber
+
+exports.createFiberFromPortal = function (portal: ReactPortal, priorityLevel: PriorityLevel): Fiber
 ```
 
 And exports the following types:
