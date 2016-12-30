@@ -16,27 +16,31 @@ This module imports the following types:
 import type { Fiber } from 'ReactFiber';
 ```
 
-This module leverages the following local types:
+Finally, it exports the following `named` exports:
+
+```js
+createFiberRoot(containerInfo: any): FiberRoot
+```
 
 And exports the following types:
 
 ```js
-type FiberRoot = {
+export type FiberRoot = {
   // Any additional information from the host associated with this root.
-  
+  containerInfo: any,
+
   // The currently active root fiber. This is the mutable root of the tree.
-  containerInfo: any 
-  
+  current: Fiber,
+
   // Determines if this root has already been added to the schedule for work.
-  current: Fiber 
+  isScheduled: boolean,
 
   // The work schedule is a linked list.
-  isScheduled: boolean
-  
-  // Top context object, used by renderSubtreeIntoContainer
-  nextScheduledRoot: ?FiberRoot
+  nextScheduledRoot: ?FiberRoot,
 
-  context: ?Object;
-  pendingContext: ?Object;
+  // Top context object, used by renderSubtreeIntoContainer
+  context: ?Object,
+
+  pendingContext: ?Object,
 };
 ```
