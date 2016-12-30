@@ -45,6 +45,20 @@ _Note: If you're wondering what `{| |}` stands for, it corresponds to Flow's [ex
 
 ## `ReactNoop`
 
+`ReactNoop` is what the module exports by default, and provides a way for core contribuotrs to render a Tree of Components without having to use a Host implementation (like the DOM).
+
+Internally, the module leverages two maps for keeping track of `rootContainers` and `roots`.
+
+- `ReactNoop#getChildren(rootID: string)`: Accesses the `rootContainers` map for the given `rootID` and returns it's children if the container exists. Otherwise, return null.
+- `ReactNoop#render(element: ReactElement<any>, callback: ?Function)`: Shortcut for testing a single root, basically is a proxy call to `ReactNoop#renderToRootWithID` passing in the given element, and a `DEFAULT_ROOT_ID` constant defined internally.
+- `ReactNoop#renderToRootWithID(element: ReactElement<any>, rootID: string, callback: ?Function)`: Tries to retrieve the `root` value for the given `rootID` in the `roots` Map. We then branch to the following conditions:
+  - If there is no root:
+    - Create a `container` with the shape: `type Container = {| rootID: string, children: Array |}`
+    - Set the key `rootID` with the value `container` in the `rootContainers` Map
+    - Create the `root` by calling to `NoopRenderer#createContainer` by passing in the new `container`
+    - Update the `roots` Map by adding the given `rootID` key with value `root`
+  - Call `NoopRenderer#updateContainer` with the given `element`, the existing `root`, `null`, and the optional `callback`.
+
 ## Module
 
 This module imports the following modules:
