@@ -2,11 +2,11 @@
 
 `ReactFiber` exports the `Fiber` type, as well as a variety of functions for building different kinds of Fibers.
 
-### `createFiber(tag: TypeOfWork, key: null | string): Fiber`
+#### `createFiber(tag: TypeOfWork, key: null | string): Fiber`
 
 Given a tag and possible key, build a Fiber!
 
-### `cloneFiber(fiber: Fiber, priorityLevel: PriorityLevel): Fiber`
+#### `cloneFiber(fiber: Fiber, priorityLevel: PriorityLevel): Fiber`
 
 Used to create an alternate fiber to do work on. From the source:
 
@@ -26,24 +26,36 @@ Used to create an alternate fiber to do work on. From the source:
 // extra memory if needed.
 ```
 
-### `createHostRootFiber(): Fiber`
+#### `createHostRootFiber(): Fiber`
 
 Creates a Fiber with the `HostRoot` `TypeOfWork`.
 
-### `createFiberFromElementType(type: mixed, key: null | string): Fiber`
+#### `createFiberFromElementType(type: mixed, key: null | string): Fiber`
 
 Creates a Fiber based on the given `type`, or we've been given a continutation that is already a fiber.
 
 As a result, we branch based loosely off of the given `type` into the following scenairos:
 
-- If `typeof type === 'function'`:
+- if `typeof type === 'function'`:
   - We use a `shouldConstruct` utility to decide whether we've been given a `ClassComponent` or `IndeterminateComponent` and build a fiber with the corresponding `tag`/`TypeOfWork`.
-- If `typeof type === 'string'`:
+- if `typeof type === 'string'`:
   - We create a Fiber with the `HostComponent` tag
-- If `typeof type === 'object' && type !== null && typeof type.tag === 'number'`:
+- if `typeof type === 'object' && type !== null && typeof type.tag === 'number'`:
   - Assumed to be a continuation and is a fiber already
+- else:
+  - We haven't gotten a valid Element type, warn if in `__DEV__`
 
-### `createFiberFromElement(element: ReactElement, priorityLevel: PriorityLevel): Fiber`
+#### `createFiberFromElement(element: ReactElement, priorityLevel: PriorityLevel): Fiber`
+
+Construct a fiber using `createFiberFromElementType`, and add `element.props` to the fiber's `fiber.pendingProps` field, as well as set the priority level on the fiber.
+
+#### `createFiberFromFragment(elements: ReactFragment, priorityLevel: PriorityLevel): Fiber`
+
+Constructs a fiber with `Fragment` as the `tag`. Sets the fiber's `pendingProps` property to `elements`, and sets its `pendingWorkPriority` property as well.
+
+#### `createFiberFromText(content: string, priorityLevel: PriorityLevel): Fiber`
+
+Creates a fiber with the `HostText` `tag`. Set `pendingProps` to `content`, and `pendingWorkPriority` to `priorityLevel`.
 
 ## Module
 
