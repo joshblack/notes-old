@@ -1,5 +1,7 @@
 # React (Fiber)
 
+This section contains as many notes as possible on React's new Fiber renderer. It looks to mirror the React project structure as closely as possible, replacing the files with `.md` extensions versus `.js`.
+
 ## Types
 
 #### `ReactEmpty`
@@ -11,19 +13,19 @@ type ReactEmpty: null | void | boolean;
 #### `ReactText`
 
 ```js
-type ReactText: string | number
+type ReactText: string | number;
 ```
 
 #### `ReactNodeList`
 
 ```js
-type ReactNodeList = ReactEmpty | ReactNode
+type ReactNodeList = ReactEmpty | ReactNode;
 ```
 
 #### `ReactFragment`
 
 ```js
-type ReactFragment = ReactEmpty | Iterable<ReactNode
+type ReactFragment = ReactEmpty | Iterable<ReactNode>;
 ```
 
 #### `ReactYield`
@@ -34,7 +36,7 @@ type ReactYield = {
   key: null | string,
   props: Object,
   continutation: mixed
-}
+};
 ```
 
 #### `ReactCoroutine`
@@ -71,7 +73,7 @@ type ReactNode =
   ReactYield |
   ReactPortal |
   ReactText |
-  ReactFragment
+  ReactFragment;
 ```
 
 ## Resources
