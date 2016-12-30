@@ -2,9 +2,14 @@
 
 It seems that `ReactFiberReconciler` exposes an important type called `HostConfig`, and exports a function that takes in a `HostConfig` and returns a `Reconciler`.
 
-## TODO
+`HostConfig` is parametrized by the following type parameters: `T`, `P`, `I`, `TI`, `C`, `CX`.
 
-- Document the Type Parameters of `HostConfig` and `Reconciler`.
+- `T`: Type
+- `P`: Props
+- `I`: Instance
+- `TI`: Text Instance
+- `C`: Container
+- `CX`: Context
 
 ## Module
 
