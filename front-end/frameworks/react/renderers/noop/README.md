@@ -41,6 +41,54 @@ _Note: If you're wondering what `{| |}` stands for, it corresponds to Flow's [ex
 
 ## `NoopRenderer`
 
-`NoopRenderer` makes a call to `ReactFiberReconclier`, which exposes a function that takes in a `HostConfig` type.
+`NoopRenderer` makes a call to [`ReactFiberReconclier`](https://github.com/joshblack/notes/blob/master/front-end/frameworks/react/renderers/shared/fiber/ReactFiberReconciler.md), which exposes a function that takes in a `HostConfig` type and returns a `Reconciler`.
 
 ## `ReactNoop`
+
+## Module
+
+This module imports the following modules:
+
+```js
+var ReactFiberReconciler = require('ReactFiberReconciler');
+var ReactInstanceMap = require('ReactInstanceMap');
+var {
+  AnimationPriority
+} = require('ReactPriorityLevel');
+var emptyObject = require('emptyObject');
+```
+
+This module imports the following types:
+
+```js
+import type { Fiber } from 'ReactFiber';
+import type { UpdateQueue } from 'ReactFiberUpdateQueue';
+```
+
+This module leverages the following local types:
+
+```js
+type Container = {
+  rootID: string;
+  children: Array<Instance | TextInstance>;
+};
+type Props = {
+  prop: any
+};
+type Instance = {|
+  type: string;
+  id: number;
+  children: Array<Instance | TextInstance>;
+  prop: any;
+|};
+type TextInstance = {|
+  text: string;
+  id: number;
+|};
+```
+
+Finally, this module exposes the following exports:
+
+```js
+ReactNoop
+```
