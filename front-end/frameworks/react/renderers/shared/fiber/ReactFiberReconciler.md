@@ -1,5 +1,13 @@
 # `ReactFiberReconciler`
 
+It seems that `ReactFiberReconciler` exposes an important type called `HostConfig`, and exports a function that takes in a `HostConfig` and returns a `Reconciler`.
+
+## TODO
+
+- Document the Type Parameters of `HostConfig` and `Reconciler`.
+
+## Module
+
 This module imports the following modules:
 
 ```js
