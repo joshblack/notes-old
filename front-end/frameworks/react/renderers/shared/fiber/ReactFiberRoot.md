@@ -1,5 +1,13 @@
 # `ReactFiberRoot`
 
+This module exports the following function:
+
+```js
+createFiberRoot(containerInfo: any): FiberRoot
+```
+
+This function creates an `uninitializedFiber` by calling out to `createHostRootFiber` from `ReactFiber`. It then constructs a `root` POJO to represent a `FiberRoot`, and creates a circular reference by setting `stateNode` on `uninitializedFiber` to be `root`. `root` is then returned.
+
 ## Module
 
 This module imports the following modules:
