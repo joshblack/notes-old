@@ -11,6 +11,8 @@ It seems that `ReactFiberReconciler` exposes an important type called `HostConfi
 - `C`: Container
 - `CX`: Context
 
+#### `scheduleTopLevelUpdate(current: Fiber, element: ReactNodeList, callback: ?Function)`
+
 ## Module
 
 This module imports the following modules:
