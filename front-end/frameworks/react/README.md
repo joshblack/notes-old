@@ -72,6 +72,12 @@ export type Fiber = {
 };
 ```
 
+### [Fiber Principles: Contributing to Fiber](https://github.com/facebook/react/issues/7942)
+
+### [[Fiber] Umbrella for remaining features & bugs](https://github.com/facebook/react/issues/7925)
+
+_[Dan Abramov explains how to help](https://github.com/facebook/react/issues/7925#issuecomment-259258900)_
+
 ## Types
 
 #### `ReactEmpty`
