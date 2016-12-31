@@ -2,6 +2,18 @@
 
 This section contains as many notes as possible on React's new Fiber renderer. It looks to mirror the React project structure as closely as possible, replacing the files with `.md` extensions versus `.js`.
 
+## Terminology
+
+_Take from Andrew Clark's talk: [What's Next for React](https://www.youtube.com/watch?v=aV1271hd9ew)_
+
+| Stack frame | Fiber |
+|-------------|-------|
+| subroutine (function) | component type |
+| body (nested function calls) | children |
+| return address | parent component |
+| arguments | props |
+| return value | DOM Elements |
+
 ## History
 
 ### [Outline for new Reconciler Infrastructure](https://github.com/facebook/react/pull/6690)
