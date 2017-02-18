@@ -1,5 +1,9 @@
 # React (Fiber)
 
+Relevant Links:
+
+- [Fiber Principles: Contributing to Fiber](https://github.com/facebook/react/issues/7942)
+
 This section contains as many notes as possible on React's new Fiber renderer. It looks to mirror the React project structure as closely as possible, replacing the files with `.md` extensions versus `.js`.
 
 ## Terminology
